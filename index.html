@@ -6,16 +6,16 @@
     <title>Shkolla Lasgush Poradeci</title>
     <meta name="description" content="Faqja zyrtare e Shkollës 9-vjeçare 'Lasgush Poradeci' - Institucion Arsimor Publik.">
     
-    <!-- Tailwind CSS -->
+    
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Fonts -->
+   
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     
-    <!-- Lucide Icons (Vanilla) -->
+    
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Tailwind Config -->
+    
     <script>
       tailwind.config = {
         theme: {
@@ -26,22 +26,22 @@
             },
             colors: {
               primary: {
-                50: '#faf6f3',  /* Very warm white */
-                100: '#f5efe9', /* Light beige */
+                50: '#faf6f3',  
+                100: '#f5efe9', 
                 200: '#e6d8cc',
                 300: '#d5bba8',
                 400: '#c29d82',
-                500: '#a67c52', /* Medium wood */
-                600: '#8a6242', /* Wood */
-                700: '#734e35', /* Dark wood */
+                500: '#a67c52',
+                600: '#8a6242', 
+                700: '#734e35', 
                 800: '#5e402e',
-                900: '#4d3528', /* Very dark wood */
+                900: '#4d3528', 
                 950: '#2a1b15',
               },
               accent: {
                 50: '#fffbeb',
                 100: '#fef3c7',
-                500: '#d97706', /* Warm Amber */
+                500: '#d97706',
                 600: '#b45309',
                 700: '#92400e',
               },
@@ -94,13 +94,13 @@
           scrollbar-width: none;
       }
 
-      /* Keyboard Accessibility: Visible Focus */
+      
       *:focus-visible {
         outline: 3px solid #d97706;
         outline-offset: 2px;
       }
       
-      /* Skip Link */
+      
       .skip-link {
         position: absolute;
         top: -100%;
@@ -115,7 +115,7 @@
         top: 0;
       }
 
-      /* High Contrast Mode Overrides */
+      
       body.high-contrast {
         background-color: #ffffff !important;
         color: #000000 !important;
@@ -132,7 +132,7 @@
       body.high-contrast .bg-primary-950,
       body.high-contrast .bg-accent-600 {
         background-color: #000000 !important;
-        color: #ffff00 !important; /* Yellow text on black for readability */
+        color: #ffff00 !important; 
         border: 2px solid #ffffff !important;
       }
       
@@ -163,7 +163,7 @@
         display: none !important;
       }
       
-      /* Scroll Reveal Classes */
+      
       .reveal-on-scroll {
         opacity: 0;
         transform: translateY(30px);
@@ -174,23 +174,23 @@
         transform: translateY(0);
       }
       
-      /* Page Transitions */
+      
       .page-section {
         transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
         width: 100%;
       }
       
-      /* Staggered delays */
+      
       .delay-100 { transition-delay: 100ms; }
       .delay-200 { transition-delay: 200ms; }
       .delay-300 { transition-delay: 300ms; }
 
-      /* Markdown Styles inside chat */
+      
       .chat-content strong { font-weight: 700; color: #5e402e; }
       .chat-content ul { list-style-type: disc; margin-left: 1.5rem; margin-top: 0.5rem; }
       .chat-content li { margin-bottom: 0.25rem; }
       
-      /* Typing Indicator */
+      
       .typing-dot {
         animation: typing 1.4s infinite ease-in-out both;
       }
@@ -202,7 +202,7 @@
         40% { transform: scale(1); }
       }
 
-      /* CSS Pattern for backgrounds */
+     
       .pattern-dots {
         background-image: radial-gradient(#ffffff 1px, transparent 1px);
         background-size: 20px 20px;
@@ -212,12 +212,12 @@
 </head>
   <body class="bg-[#faf6f3] text-stone-900 min-h-screen flex flex-col overflow-x-hidden selection:bg-accent-200 selection:text-primary-900">
 
-    <!-- Skip to Main Content Link -->
+    
     <a href="#main-content" class="skip-link text-primary-900 focus:outline-none focus:ring-4 focus:ring-accent-500 rounded-br-lg shadow-xl">
       Kalo te përmbajtja kryesore
     </a>
 
-    <!-- Notification Toast -->
+    
     <div id="toast" class="fixed top-28 right-4 z-[70] transform translate-x-full transition-transform duration-300 ease-out pointer-events-none" role="alert" aria-live="assertive">
       <div class="bg-white text-stone-800 px-6 py-4 rounded-xl shadow-2xl flex items-center border border-primary-100 border-l-4 border-l-accent-500 pointer-events-auto">
         <div class="bg-accent-50 p-2 rounded-full mr-3">
@@ -230,11 +230,11 @@
       </div>
     </div>
 
-    <!-- Navigation Header -->
+    
     <header class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-40 border-b border-primary-100 transition-all duration-300">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-20">
-          <!-- Logo -->
+          
           <div class="flex-shrink-0 flex items-center cursor-pointer group" onclick="app.navigateTo('home')" role="button" tabindex="0" onkeydown="if(event.key === 'Enter') app.navigateTo('home')">
             <div class="bg-primary-100 p-2.5 rounded-xl mr-3 group-hover:bg-primary-800 group-hover:text-white transition-all duration-300 shadow-sm">
               <i data-lucide="graduation-cap" class="h-6 w-6 text-primary-700 group-hover:text-white transition-colors"></i>
@@ -245,7 +245,7 @@
             </div>
           </div>
 
-          <!-- Desktop Nav -->
+          
           <nav class="hidden md:flex items-center space-x-1 bg-primary-50/50 p-1.5 rounded-full border border-primary-100/50" aria-label="Navigimi Kryesor">
             <button onclick="app.navigateTo('home')" class="nav-btn px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 relative overflow-hidden group" data-page="home">
               <span class="relative z-10 flex items-center gap-2"><i data-lucide="home" class="h-4 w-4"></i> Kreu</span>
@@ -261,7 +261,6 @@
             </button>
           </nav>
 
-          <!-- Mobile Menu Button -->
           <div class="flex items-center md:hidden">
             <button onclick="app.toggleMobileMenu()" class="p-2.5 rounded-xl text-stone-600 hover:text-primary-700 hover:bg-primary-50 focus:outline-none transition-colors border border-transparent hover:border-primary-100" aria-label="Hap menunë" aria-expanded="false" id="mobile-menu-btn">
               <i data-lucide="menu" class="h-6 w-6"></i>
@@ -270,7 +269,7 @@
         </div>
       </div>
 
-      <!-- Mobile Nav -->
+      
       <div id="mobile-menu" class="hidden md:hidden bg-white/98 backdrop-blur-xl border-t border-primary-100 shadow-xl absolute w-full z-50 origin-top animate-fade-in-up" role="navigation" aria-labelledby="mobile-menu-btn">
         <div class="px-4 pt-4 pb-6 space-y-2">
           <button onclick="app.navigateTo('home')" class="mobile-nav-btn block w-full text-left px-4 py-3 rounded-xl text-base font-medium transition-all flex items-center gap-3" data-page="home">
@@ -286,14 +285,14 @@
       </div>
     </header>
 
-    <!-- Main Content Area -->
+    
     <main id="main-content" class="flex-grow relative" tabindex="-1">
       
-      <!-- HOME PAGE -->
+     
       <div id="page-home" class="page-section">
-        <!-- Hero -->
+        
         <div class="relative bg-primary-800 overflow-hidden min-h-[500px] md:min-h-[600px] flex items-center">
-          <!-- Animated Background Elements -->
+          
           <div class="absolute inset-0 opacity-20 pointer-events-none">
              <div class="absolute -top-24 -left-24 w-96 h-96 bg-[#d6b498] rounded-full mix-blend-overlay filter blur-3xl animate-pulse"></div>
              <div class="absolute top-32 right-12 w-72 h-72 bg-accent-600 rounded-full mix-blend-overlay filter blur-3xl opacity-40 animate-pulse-slow"></div>
@@ -307,7 +306,7 @@
                 <span class="block text-primary-200 mt-4 text-2xl sm:text-3xl font-sans font-normal tracking-wide opacity-90">Institucion Arsimor Publik</span>
               </h1>
               <p class="mt-8 max-w-md mx-auto text-base text-primary-100 sm:text-lg md:text-xl md:max-w-3xl leading-relaxed reveal-on-scroll delay-200">
-                Mirësevini në vatrën e dijes. Ne ofrojmë një mjedis gjithëpërfshirës ku çdo nxënës inkurajohet të zbulojë potencialin e tij të plotë.
+                Mirë se vini në vatrën e dijes! <br>Ne ofrojmë një mjedis gjithëpërfshirës, ku çdo nxënës inkurajohet të zbulojë potencialin e tij të plotë.
               </p>
               <div class="mt-12 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center gap-4 reveal-on-scroll delay-300">
                 <button onclick="app.navigateTo('library')" class="w-full flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-full text-primary-900 bg-[#fdfbf7] hover:bg-white hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.2)] md:px-10">
@@ -322,7 +321,7 @@
           </div>
         </div>
 
-        <!-- Features -->
+        
         <section class="py-16 md:py-24 bg-[#faf6f3]">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12 md:mb-16 reveal-on-scroll">
@@ -330,7 +329,7 @@
               <div class="h-1 w-24 bg-accent-500 mx-auto mt-4 rounded-full"></div>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-              <!-- Card 1 -->
+            
               <div class="bg-white rounded-3xl shadow-sm p-8 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 border border-primary-100 group reveal-on-scroll delay-100">
                 <div class="w-16 h-16 bg-primary-50 rounded-2xl flex items-center justify-center mb-6 text-primary-700 group-hover:bg-primary-700 group-hover:text-white transition-colors duration-300 shadow-inner group-hover:rotate-3 transform">
                   <i data-lucide="graduation-cap" class="h-8 w-8"></i>
@@ -338,7 +337,7 @@
                 <h3 class="text-xl font-bold text-primary-900 mb-3 group-hover:text-accent-600 transition-colors">Stafi Pedagogjik</h3>
                 <p class="text-stone-600 leading-relaxed">Mësues të kualifikuar dhe me përvojë që përkushtohen për suksesin akademik dhe social të çdo nxënësi.</p>
               </div>
-              <!-- Card 2 -->
+              
               <div class="bg-white rounded-3xl shadow-sm p-8 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 border border-primary-100 group reveal-on-scroll delay-200">
                 <div class="w-16 h-16 bg-primary-50 rounded-2xl flex items-center justify-center mb-6 text-primary-700 group-hover:bg-primary-700 group-hover:text-white transition-colors duration-300 shadow-inner group-hover:rotate-3 transform">
                   <i data-lucide="monitor" class="h-8 w-8"></i>
@@ -346,7 +345,7 @@
                 <h3 class="text-xl font-bold text-primary-900 mb-3 group-hover:text-accent-600 transition-colors">Teknologji Moderne</h3>
                 <p class="text-stone-600 leading-relaxed">Laboratorë bashkëkohorë për informatikë dhe shkenca natyrore të pajisura plotësisht për mësimin praktik.</p>
               </div>
-              <!-- Card 3 -->
+              
               <div class="bg-white rounded-3xl shadow-sm p-8 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 border border-primary-100 group reveal-on-scroll delay-300 sm:col-span-2 lg:col-span-1">
                 <div class="w-16 h-16 bg-primary-50 rounded-2xl flex items-center justify-center mb-6 text-primary-700 group-hover:bg-primary-700 group-hover:text-white transition-colors duration-300 shadow-inner group-hover:rotate-3 transform">
                   <i data-lucide="users" class="h-8 w-8"></i>
@@ -358,12 +357,12 @@
           </div>
         </section>
 
-        <!-- Library CTA -->
+       
         <div class="bg-primary-50 py-16 md:py-24 border-t border-primary-100">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-gradient-to-br from-primary-800 to-primary-950 rounded-3xl shadow-2xl overflow-hidden border border-primary-700 reveal-on-scroll">
               <div class="px-6 py-12 md:p-16 text-center md:text-left md:flex md:items-center md:justify-between relative group">
-                <!-- Decorative Elements -->
+                
                 <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 rounded-full bg-white opacity-5 transition-transform duration-700 group-hover:scale-150"></div>
                 <div class="absolute bottom-0 left-0 -ml-16 -mb-16 w-40 h-40 rounded-full bg-accent-600 opacity-10 blur-2xl"></div>
                 
@@ -390,7 +389,7 @@
         </div>
       </div>
 
-      <!-- LIBRARY PAGE -->
+      
       <div id="page-library" class="page-section hidden pt-8 min-h-screen">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col justify-center min-h-[70vh]">
           
@@ -402,7 +401,7 @@
           </div>
 
           <div class="bg-gradient-to-br from-primary-800 to-primary-950 rounded-3xl shadow-2xl overflow-hidden border border-primary-700 relative min-h-[450px] flex flex-col justify-center reveal-on-scroll delay-100 group">
-             <!-- Background Image Overlay (Replaced with CSS Pattern) -->
+             
              <div class="absolute inset-0 pattern-dots opacity-10 group-hover:opacity-20 transition-opacity duration-1000 scale-105"></div>
              
              <div class="px-6 py-12 md:p-20 text-center md:text-left md:flex md:items-center md:justify-between relative z-10">
@@ -448,7 +447,7 @@
             </div>
             <div class="bg-white p-6 rounded-2xl border border-primary-100 shadow-sm flex items-center hover:shadow-md transition-shadow">
                <div class="bg-primary-100 p-3 rounded-full mr-4 text-primary-700"><i data-lucide="map-pin" class="h-6 w-6"></i></div>
-               <div><p class="text-sm text-stone-500 uppercase font-bold tracking-wider">Vendndodhja</p><p class="font-bold text-primary-900 text-lg">Kati i 2-të, Krahu Lindor</p></div>
+               <div><p class="text-sm text-stone-500 uppercase font-bold tracking-wider">Vendndodhja</p><p class="font-bold text-primary-900 text-lg">Kati i 2-të</p></div>
             </div>
             <div class="bg-white p-6 rounded-2xl border border-primary-100 shadow-sm flex items-center hover:shadow-md transition-shadow sm:col-span-2 lg:col-span-1">
                <div class="bg-primary-100 p-3 rounded-full mr-4 text-primary-700"><i data-lucide="file-text" class="h-6 w-6"></i></div>
@@ -458,7 +457,7 @@
         </div>
       </div>
 
-      <!-- CONTACT PAGE -->
+      
       <div id="page-contact" class="page-section hidden">
         <div class="bg-[#faf6f3] py-16 min-h-[80vh]">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -471,7 +470,7 @@
     
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
               
-              <!-- Left Column: Form -->
+              
               <div class="bg-white p-8 md:p-10 rounded-3xl border border-primary-100 shadow-lg reveal-on-scroll delay-100 h-fit">
                 <h3 class="text-2xl font-bold text-primary-800 mb-2">Dërgoni një mesazh</h3>
                 <p class="text-stone-500 mb-8">Do t'ju kthejmë përgjigje sa më shpejt të jetë e mundur.</p>
@@ -506,23 +505,23 @@
                 </form>
               </div>
 
-              <!-- Right Column: Info & Map -->
+              
               <div class="space-y-6 reveal-on-scroll delay-200">
-                <!-- Info Cards -->
+                
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div class="bg-white p-6 rounded-2xl border border-primary-100 shadow-sm hover:shadow-md transition-all">
                     <div class="w-10 h-10 bg-accent-100 rounded-lg flex items-center justify-center mb-4 text-accent-700">
                        <i data-lucide="phone" class="h-5 w-5"></i>
                     </div>
                     <h5 class="font-bold text-primary-900">Telefoni</h5>
-                    <p class="text-sm text-stone-600 mt-1 hover:text-accent-600 cursor-pointer" tabindex="0">+355 4 222 3333</p>
+                    <p class="text-sm text-stone-600 mt-1 hover:text-accent-600 cursor-pointer" tabindex="0">+355 67 299 8744</p>
                   </div>
                   <div class="bg-white p-6 rounded-2xl border border-primary-100 shadow-sm hover:shadow-md transition-all">
                     <div class="w-10 h-10 bg-accent-100 rounded-lg flex items-center justify-center mb-4 text-accent-700">
                        <i data-lucide="mail" class="h-5 w-5"></i>
                     </div>
                     <h5 class="font-bold text-primary-900">Email</h5>
-                    <p class="text-sm text-stone-600 mt-1 hover:text-accent-600 cursor-pointer" tabindex="0">info@shkollaLasgush Poradeci.edu.al</p>
+                    <p class="text-sm text-stone-600 mt-1 hover:text-accent-600 cursor-pointer" tabindex="0">lasgushporadeci_tirane@yahoo.com</p>
                   </div>
                 </div>
 
@@ -532,11 +531,11 @@
                    </div>
                    <div>
                       <h5 class="font-bold text-primary-900">Adresa</h5>
-                      <p class="text-sm text-stone-600 mt-1">Rruga Llambi Bonata, Kombinat, Tiranë</p>
+                      <p class="text-sm text-stone-600 mt-1">Rruga "Petraq Leka", Kombinat, Tiranë</p>
                    </div>
                 </div>
 
-                <!-- Map -->
+                
                 <div class="rounded-3xl overflow-hidden border-4 border-white shadow-xl h-[350px] bg-primary-50 relative group">
                    <iframe 
                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.0655677027583!2d19.77093287664654!3d41.3072741009581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13503046a3666011%3A0x6739665d93370327!2sShkolla%209-vje%C3%A7are%20%22Lasgush%20Poradeci%22!5e0!3m2!1sq!2sal!4v1715000000000!5m2!1sq!2sal" 
@@ -558,9 +557,9 @@
       </div>
     </main>
 
-    <!-- Footer -->
+    
     <footer class="bg-primary-950 text-primary-100 py-16 border-t border-primary-900 relative overflow-hidden">
-      <!-- Footer Background Pattern -->
+      
       <div class="absolute inset-0 opacity-5 pointer-events-none">
           <div class="absolute right-0 bottom-0 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl"></div>
       </div>
